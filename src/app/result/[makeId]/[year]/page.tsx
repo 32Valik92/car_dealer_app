@@ -1,9 +1,18 @@
 import React from 'react';
+import {ModelsComponent} from "@/components";
 
-const ResultPage = () => {
+type Props = {
+    params: {
+        makeId: string;
+        year: string;
+    }
+}
+
+const ResultPage = async (props: Props) => {
+    const {params} = props;
     return (
         <div>
-            ResultPage
+            <ModelsComponent makeId={params.makeId} year={params.year}/>
         </div>
     );
 };

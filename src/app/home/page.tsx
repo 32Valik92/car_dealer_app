@@ -1,4 +1,4 @@
-import {HomeComponentClient} from "@/components";
+import {HomeComponent} from "@/components";
 import {carService} from "@/services";
 
 const HomePage = async () => {
@@ -11,7 +11,7 @@ const HomePage = async () => {
 
     return (
         // return our client component and
-        <HomeComponentClient VehicleTypeResponse={VehicleTypeResponse} yearsArr={yearsArr}/>
+        <HomeComponent VehicleTypeResponse={VehicleTypeResponse} yearsArr={yearsArr}/>
     );
 };
 
