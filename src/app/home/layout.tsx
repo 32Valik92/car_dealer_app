@@ -4,7 +4,7 @@ import React, {Suspense} from "react";
 import Loading from "@/app/loading";
 
 export const metadata: Metadata = {
-   title: "",
+   title: "Home page",
    description: "",
 };
 
