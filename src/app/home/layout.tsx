@@ -1,19 +1,23 @@
-import React from "react";
 import type {Metadata} from "next";
+import React, {Suspense} from "react";
+
+import Loading from "@/app/loading";
 
 export const metadata: Metadata = {
-    title: "",
-    description: "",
+   title: "",
+   description: "",
 };
 
 type PropType = { children: React.ReactNode };
 
 const HomeLayout = ({children}: PropType) => {
-    return (
-        <div>
+   return (
+      <div>
+         <Suspense fallback={<Loading/>}>
             {children}
-        </div>
-    );
-}
+         </Suspense>
+      </div>
+   );
+};
 
 export default HomeLayout;
