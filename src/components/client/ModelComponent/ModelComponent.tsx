@@ -8,9 +8,9 @@ interface IProps {
     key: number;
 }
 
-const ModelComponent: FC<IProps> = ({ model, key }) => {
+const ModelComponent: FC<IProps> = ({ model }) => {
     return (
-        <div key={key} className="p-4 border border-gray-200 rounded-lg shadow-sm mb-4 bg-white">
+        <div className="p-4 border border-gray-200 rounded-lg shadow-sm mb-4 bg-white">
             <div className="text-sm font-medium text-gray-700">Make ID: <span className="font-normal">{model.Make_ID}</span></div>
             <div className="text-sm font-medium text-gray-700">Make Name: <span className="font-normal">{model.Make_Name}</span></div>
             <div className="text-sm font-medium text-gray-700">Model ID: <span className="font-normal">{model.Model_ID}</span></div>
