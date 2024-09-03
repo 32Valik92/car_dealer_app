@@ -1,5 +1,6 @@
 import {HomeComponent} from "@/components";
 import {carService} from "@/services";
+import {Suspense} from "react";
 
 const HomePage = async () => {
     // get all VehicleTypes
@@ -11,7 +12,9 @@ const HomePage = async () => {
 
     return (
         // return our client component and
-        <HomeComponent VehicleTypeResponse={VehicleTypeResponse} yearsArr={yearsArr}/>
+        <Suspense fallback={<div>Loading...</div>}>
+            <HomeComponent VehicleTypeResponse={VehicleTypeResponse} yearsArr={yearsArr}/>
+        </Suspense>
     );
 };
 
